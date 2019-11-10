@@ -1,31 +1,70 @@
+[![Gem Version](https://badge.fury.io/rb/ghstars.svg)](https://badge.fury.io/rb/ghstars)
+
 # Ghstars
 
-Welcome to your new gem! In this directory, you'll find the files you need to
-be able to package up your Ruby library into a gem. Put your Ruby code in the
-file `lib/ghstars`. To experiment with that code, run `bin/console` for an
-interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This little command-line tool helps you to shows your **public** GitHub
+repositories stars count.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'ghstars'
+```bash
+$ gem install ghstars
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install ghstars
 
 ## Usage
 
-TODO: Write usage instructions here
+You need to create a [GitHub token](https://github.com/settings/tokens/new) or 
+use existing token of yours. Set your environment variable as: `GITHUB_TOKEN`:
+
+```bash
+export GITHUB_TOKEN=your-token-here
+```
+
+Then,
+
+```bash
+$ ghstars
+
+Commands:
+  ghstars help [COMMAND]  # Describe available commands or one specific command
+  ghstars list [AMOUNT]   # List your public repositories total star count in detail
+  ghstars show            # Shows your public repositories total star count
+  ghstars version         # Version information
+
+Options:
+  [--verbose], [--no-verbose]  
+```
+
+If you need only the sum of stars, run: `ghstars show`. Use `ghstars list` for
+detailed information. Other examples:
+
+```bash
+$ ghstars list                  # all of your repos
+$ ghstars list 5                # top 5
+$ ghstars show                  # just sum of stars
+$ ghstars show --verbose
+$ ghstars list --verbose
+$ ghstars list 5 --verbose
+```
+
+Example output for **vigo** user: `ghstars list 10`
+
+    +----+-----------------------------------------+------+
+    | #  | Name of Repository                      | Star |
+    +----+-----------------------------------------+------+
+    | 1  | vigo/git-puf-noktalari                  |  244 |
+    | 2  | vigo/kommit                             |  198 |
+    | 3  | vigo/ruby101-kitap                      |  170 |
+    | 4  | vigo/dinozorus                          |   88 |
+    | 5  | vigo/turk-scene-tarihi                  |   78 |
+    | 6  | vigo/lyk-2017                           |   40 |
+    | 7  | vigo/django2-project-template           |   32 |
+    | 8  | vigo/textmate-twitterbootstrap.tmbundle |   31 |
+    | 9  | vigo/textmate-octopress.tmbundle        |   30 |
+    | 10 | vigo/gh-issues                          |   18 |
+    +----+-----------------------------------------+------+
+    |    | Total count of selection                |  929 |
+    +----+-----------------------------------------+------+
 
 ## Development
 
@@ -42,7 +81,7 @@ push git commits and tags, and push the `.gem` file to
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/vigo/ghstars. This project is intended to be a safe,
+https://github.com/vbyazilim/ghstars. This project is intended to be a safe,
 welcoming space for collaboration, and contributors are expected to adhere to
 the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
