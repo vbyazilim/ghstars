@@ -8,14 +8,14 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Uğur Özyılmazel"]
   spec.email         = ["ugurozyilmazel@gmail.com"]
 
-  spec.summary       = %q{Show public git repositories star count of given GitHub username}
-  spec.description   = %q{Show public git repositories star count of given GitHub username}
+  spec.summary       = %q{Shows your public repositories total star count}
+  spec.description   = %q{Shows your public repositories total star count}
   spec.homepage      = "https://github.com/vbyazilim/ghstars"
   spec.license       = "MIT"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/vbyazilim/ghstars.git"
-  spec.metadata["changelog_uri"] = "https://github.com/vigo/gh-issues/blob/master/CHANGELOG.md"
+  spec.metadata["changelog_uri"] = "https://github.com/vbyazilim/ghstars/blob/master/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
