@@ -26,6 +26,6 @@ end
 
 desc "Push #{get_package_name} to GitHub registry"
 task :push_to_github do
-  package_path = "pkg/#{get_package_name}.gem"
+  package_path = "pkg/#{get_package_name}"
   system "gem push --key github --host https://rubygems.pkg.github.com/vbyazilim #{package_path}"
 end
