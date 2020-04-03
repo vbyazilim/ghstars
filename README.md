@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/vbyazilim/ghstars.svg?branch=master)](https://travis-ci.org/vbyazilim/ghstars)
 [![Gem Version](https://badge.fury.io/rb/ghstars.svg)](https://badge.fury.io/rb/ghstars)
 
 # Ghstars
