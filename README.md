@@ -11,6 +11,12 @@ repositories stars count.
 $ gem install ghstars
 ```
 
+or;
+
+```bash
+$ gem install ghstars --version "0.1.2" --source "https://rubygems.pkg.github.com/vbyazilim"
+```
+
 ## Usage
 
 You need to create a [GitHub token](https://github.com/settings/tokens/new) or 
