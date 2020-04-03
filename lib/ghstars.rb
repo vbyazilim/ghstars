@@ -15,8 +15,9 @@ module Ghstars
 
   def self.check_github_credentials
     begin
-      user = @@client.user
+      @@client.user
     rescue Octokit::Unauthorized => error_message
+      puts error_message
       raise ::Ghstars::GitHubBadCredentialsError, "Bad GitHub credentials."
     end
   end
