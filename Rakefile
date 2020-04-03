@@ -16,3 +16,16 @@ task :bump, [:revision] do |t, args|
   abort "Please provide valid revision: #{AVAILABLE_REVISIONS.join(',')}" unless AVAILABLE_REVISIONS.include?(args.revision)
   system "bumpversion #{args.revision}"
 end
+
+def get_package_name
+  name = Dir['*.gemspec'].first.split('.').first
+  line = File.read("lib/#{name}/version.rb")[/^\s*VERSION\s*=\s*.*/]
+  version = line.match(/.*VERSION\s*=\s*['"](.*)['"]/)[1]
+  "#{name}-#{version}.gem"
+end
+
+desc "Push #{get_package_name} to GitHub registry"
+task :push_to_github do
+  package_path = "pkg/#{get_package_name}.gem"
+  system "gem push --key github --host https://rubygems.pkg.github.com/vbyazilim #{package_path}"
+end
