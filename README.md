@@ -15,7 +15,7 @@ $ gem install ghstars
 or;
 
 ```bash
-$ gem install ghstars --version "0.1.5" --source "https://rubygems.pkg.github.com/vbyazilim"
+$ gem install ghstars --version "0.1.6" --source "https://rubygems.pkg.github.com/vbyazilim"
 ```
 
 ## Usage
